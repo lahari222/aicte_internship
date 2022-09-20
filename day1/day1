@@ -1,4 +1,4 @@
-program to find size of the primary datatypes.
+1.program to find size of the primary datatypes.
   #include<stdio.h>
   int main(){
   int intType;
@@ -11,4 +11,4 @@ program to find size of the primary datatypes.
   printf("%c",sizeof(charType));
   return 0;
 }
-practise the sample programs to get familiar with compiling and ececution of c program in linux.
+2.practise the sample programs to get familiar with compiling and ececution of c program in linux.
