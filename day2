@@ -1,1 +1,15 @@
+1.program to swap two numbers using bitwise operator.
+#include<stdio.h>
+int main(){
+int a=10;
+int b=20;
+a=a^b;
+b=a^b;
+a=a^b;
+printf("%d%d",a,b);
+return 0;
+}
+o/p:a=20,b=10.
+2.program to calculate GRADE in your first semester(take input from user).
+
 
