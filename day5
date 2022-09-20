@@ -1,1 +1,158 @@
-
+1.PROGRAM TO CREATE ,DECLARE AND INITIALIZE STRUCTURE.
+   #include<stdio.h>
+   struct employee{
+       char name[30];
+       int empId;
+       float salary;
+   };
+   int main()
+   {
+   struct employee emp={"Mike",1120,76909.oof};
+   printf("%s",emp.name);
+   printf("%d",emp.empId);
+   printf("%f",emp.salary);
+   return 0;
+   }
+2.PROGRAM TO ADD TWO DISTANCES IN FEET AND INCHES USING STRUCTURE.
+   #include<stdio.h>
+   struct distance
+   {
+       int feet;
+       int inch;
+   };
+   int main()
+   {
+   struct distance d1,d2,sum;
+   printf("enter the feet and inch of the first distance");
+   scanf("%d%d",&d1.feet,&d1.inch);
+   printf("enter the feet and inch of the second distance");
+   scanf("%d%d",&d2.feet,&d2.inch);
+   sum.inch=d1.inch+d2.inch;
+   sum.feet=d1.feet+d2.feet;
+   if(sum.inch>=12)
+   {
+       sum.feet+=sum.inch/12;
+       sum.inch%=12;
+   }
+   printf("%d",sum.feet,sum.inch);
+   return 0;
+   }
+3.PROGRAM TO DEMONSTRATE EXAMPLE OF NESTED STRUCTURE.
+   #include<stdio.h>
+   struct address
+   {
+   int houseno;
+   char street[20];
+   int stateno;
+   };
+   struct student
+   {
+   char name[30];
+   int roll;
+   struct address adrs;
+   };
+   int main()
+   {
+   struct student stud;
+   printf("enter name and roll number of student");
+   scanf("%s%d",stud.name,&stud.roll);
+   printf(enter street name, house number and state number");
+   scanf("%s%d%d",stud.adrs.street,&stud.adrs.houseno,&stud.adrs.stateno);
+   printf("student detail is");
+   printf("%s%d",stud.name,stud.roll);
+   printf(%s%d%d",stud.adrs.street,stud.adrs.houseno,stud.adrs.stateno);
+   return 0;
+   }
+ 4.PROGRAM TO READ AND PRINT  AN EMPLOYEE'S DETAIL USING STRUCTURE.
+   #include<stdio.h>
+   struct employee{
+      char name[30];
+      int empId;
+      float salary;
+   };
+   int main()
+   {
+      struct employee emp;
+      printf("enter details");
+      printf("name");
+      printf("ID");
+      printf("salary");
+      printf("entered detail is");
+      printf("%s",emp.name);
+      printf("%d",emp.empId);
+      printf("%f",emp.salary);
+      return 0;
+   }
+ 5.PROGRAM TO DECLARE,INITIALIZE AN UNION ,EXAMPLE OF UNION.
+   `#include<stdio.h>
+    union pack{
+       char a;
+       int b;
+       double c;
+    };
+    int main()
+    {
+    pack p;
+    printf("%d",sizeof(pack));
+    p.a='A';
+    printf("%c",p.a);
+    p.b=10;
+    printf("%d",p.b);
+    p.c=12345.6790;
+    printf("%f",p.c);
+    p.a='A'
+    p.b=10;
+    p.c=12345.6790;
+    printf("%c%d%f,p.a,p.b,p.c);
+    return 0;
+    }
+6.PRODRAM TO DEMONSTRATE EXAMPLE OF STRUCTURE OF ARRAY.
+    #include<stdio.h>
+    struct student 
+    {
+        char name[30];
+        int roll;
+        float marks;
+    };
+    int main()
+    {
+       struct student s[3];
+       int i;
+    for(i=0;i<3;i++)
+    {
+       printf("enter name,roll and marks of the student");
+       scanf("%s%d%f",&s[i].name,&s[i].roll,&s[i].marks);
+    }
+    for(i=0;i<3;i++)
+    {
+       printf("%s",s[i].name);
+       printf("%d",s[i].roll);
+       printf("%f",s[i].marks);
+    }
+    return 0;
+    }
+7.PROGRAM TO DEMONSTRATE EXAMPLE STRUCTURE POINTER (STRUCTURE WITH POINTER).
+    #include<stdio.h>
+    struct point
+    {
+      int x;
+      int y;
+    };
+    struct rect{
+      struct point left;
+      struct point right;
+    };
+    void areaOfRectangle(struct rect r)
+    {
+    int area=(r.right.x-r.left.x)*(r.right.y-r.left.y);
+    printf("%d",area);
+    }
+    int main()
+    {
+    struct rect r={{0,0},{1,1}};
+    areaOfRectangle(r);
+    return 0;
+    }
+    
+   
+   
